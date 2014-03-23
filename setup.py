@@ -10,11 +10,13 @@ if __name__ == "__main__":
     author       = "J Gomez-Dans/NCEO & University College London"
     author_email = "j.gomez-dans@ucl.ac.uk"
     url = "http://github.com/jgomezdans/twostream"
-    
+    long_description = open ("README.rst", 'r' ).read()
     setup(name=name,
         description=description, \
+        long_description=long_description, \
         author=author, \
         author_email = author_email, \
+        url=url, version=1.0,
         ext_modules=[Extension(name='twostream', \
           sources=['twostream/twostream.f90'],
          f2py_options=['only:']+['twostream_solver']+[':'])])    
