@@ -16,8 +16,8 @@ if __name__ == "__main__":
         long_description=long_description, \
         author=author, \
         author_email = author_email, \
-        url=url, version=1.0,
+        url=url, version="1.0.0",
         ext_modules=[Extension(name='twostream', \
           sources=['twostream/twostream.f90'],
-         f2py_options=['only:']+['twostream_solver']+[':'])])    
+          f2py_options=['only:']+['twostream_solver']+[':'])])    
     
